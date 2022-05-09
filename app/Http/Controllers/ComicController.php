@@ -14,7 +14,10 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::orderBy('title')
+                        ->get();
+
+        return view('index', compact('comics'));
     }
 
     /**
