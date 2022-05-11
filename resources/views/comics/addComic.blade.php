@@ -54,6 +54,6 @@
 
             <a href="{{ route('home') }}" class="btn btn-link" id="btn-back">Back</a>
 
-            </form>
+        </form>
     </main>
 @endsection
