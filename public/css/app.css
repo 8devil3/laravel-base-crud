@@ -12188,7 +12188,7 @@ main {
   padding: 2rem;
 }
 
-main .welcome-title {
+main #welcome-title {
   font-size: 5rem;
 }
 
