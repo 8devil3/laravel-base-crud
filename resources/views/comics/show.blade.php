@@ -5,11 +5,11 @@
 @section('mainContent')
 <main>
     <div class="container">
-        <div class="row p-5">
-            <div class="col-2">
-                <img src="{{ $comic['thumb'] }}" class="img-fluid" alt="{{ $comic['title'] }}">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{ $comic['thumb'] }}" class="w-100" alt="{{ $comic['title'] }}">
             </div>
-            <div class="col-10">
+            <div class="col-8">
                 <h1>{{ $comic['title'] }}</h1>
                 <p>{{ $comic['description'] }}</p>
                 <p>$ {{ $comic['price'] }}</p>

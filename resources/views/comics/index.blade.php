@@ -1,10 +1,12 @@
 @extends('templates.base')
 
-@section('title', 'Comics | Homepage')
+@section('title', 'Comics | All')
 
 @section('mainContent')
     <main>
         <div class="container">
+            <div class="text-center"><a href="{{ route('home') }}">back to homepage</a></div>
+
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 p-4">
                 @foreach ($comics as $comic)
                 <div class="col">
