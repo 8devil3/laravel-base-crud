@@ -6,6 +6,7 @@
     <main>
         <div class="container">
             <div class="text-center"><a href="{{ route('home') }}">back to homepage</a></div>
+            <div class="text-center"><a href="{{ route('comics.create') }}">add new comic</a></div>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 p-4">
                 @foreach ($comics as $comic)

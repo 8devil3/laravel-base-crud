@@ -50,6 +50,8 @@
 
             <button type="submit" class="btn btn-primary">Add</button>
 
+            <div class="btn btn-secondary" id="btn-reset">Clear fields</div>
+
             <a href="{{ route('home') }}" class="btn btn-link" id="btn-back">Back</a>
 
             </form>
