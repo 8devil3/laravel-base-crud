@@ -12192,3 +12192,8 @@ main .welcome-title {
   font-size: 5rem;
 }
 
+main #addComicForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
