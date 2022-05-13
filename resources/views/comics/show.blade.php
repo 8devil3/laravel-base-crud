@@ -14,12 +14,13 @@
                 <p>{{ $comic['description'] }}</p>
                 <p>$ {{ $comic['price'] }}</p>
 
-                <a class="btn btn-warning" href="{{ route('comics.edit', $comic['id']) }}">Edit</a>
+                <!-- Edit  -->
+                <a class="btn btn-warning" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
 
                 <!-- Popup Trigger -->
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delPopup">Delete</button>
 
-                <!-- Popup -->
+                <!-- Deletion popup -->
                 <div class="modal fade" id="delPopup" tabindex="-1" aria-labelledby="delPopup" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
