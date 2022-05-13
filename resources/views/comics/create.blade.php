@@ -11,7 +11,11 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" name="title" aria-describedby="title">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" aria-describedby="title" value="{{ old('title') }}">
+
+                @error('title')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="mb-3 d-flex flex-column">
@@ -21,31 +25,51 @@
 
             <div class="mb-3">
                 <label for="thumb" class="form-label">Cover</label>
-                <input type="text" class="form-control" name="thumb" aria-describedby="cover" placeholder="Add image URL" value="https://picsum.photos/768/1024">
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" aria-describedby="cover" placeholder="Add image URL" value="https://picsum.photos/768/1024">
+
+                @error('thumb')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" name="price" aria-describedby="price" step="0.01" min="0" placeholder="$ 0.00" >
+                <input type="number" class="form-control @error('price') is-invalid @enderror" name="price" aria-describedby="price" step="0.01" min="0" placeholder="$ 0.00" >
+
+                @error('price')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
                 </div>
 
             <div class="mb-3">
                 <label for="series" class="form-label">Series</label>
-                <input type="text" class="form-control" name="series" aria-describedby="series">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" name="series" aria-describedby="series">
+
+                @error('series')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="sale_date" class="form-label">Sale date</label>
-                <input type="date" class="form-control" name="sale_date" aria-describedby="sale date">
+                <input type="date" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" aria-describedby="sale date">
+
+                @error('sale_date')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
-                <select name="type" class="form-control" aria-describedby="type">
+                <select name="type" class="form-control @error('type') is-invalid @enderror" aria-describedby="type">
                     <option value="comic">Comic</option>
                     <option value="graphic-novel">Graphic Novel</option>
                     <option value="poster">Poster</option>
                 </select>
+
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <button type="submit" class="btn btn-primary">Add</button>
