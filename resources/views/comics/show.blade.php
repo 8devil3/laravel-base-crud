@@ -44,7 +44,9 @@
                 </div>
                 <!-- / -->
 
+                <!-- Back btn -->
                 <a href="{{ route('comics.index') }}" class="btn btn-link" id="btn-back">Back to all</a>
+                <!-- / -->
 
             </div>
         </div>
