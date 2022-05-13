@@ -27,7 +27,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.addComic');
+        return view('comics.create');
     }
 
     /**
@@ -88,6 +88,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }
