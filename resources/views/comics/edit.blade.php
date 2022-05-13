@@ -26,7 +26,7 @@
 
             <div class="mb-3">
                 <label for="thumb" class="form-label">Cover</label>
-                <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" aria-describedby="cover" placeholder="Add image URL" value="{{ old('thumb') }}>
+                <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" aria-describedby="cover" placeholder="Add image URL" value="{{ old('thumb') }}">
 
                 @error('thumb')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -77,7 +77,7 @@
 
             <div class="btn btn-secondary" id="btn-reset">Clear fields</div>
 
-            <a href="{{ url()->previous() }}" class="btn btn-link" id="btn-back">Back</a>
+            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-link" id="btn-back">Back to comic</a>
 
         </form>
     </main>
