@@ -2,11 +2,19 @@ require('./bootstrap');
 
 
 // reset form button
-const btnReset = document.querySelector('#btn-reset');
+const btnAddReset = document.querySelector('#btn-add-reset');
+const btnEditReset = document.querySelector('#btn-edit-reset');
 const addComicForm = document.querySelector('#addComicForm')
+const editComicForm = document.querySelector('#editComicForm')
 
-btnReset.addEventListener('click', clearForm);
 
-function clearForm(){
+btnAddReset.addEventListener('click', clearAddForm);
+btnEditReset.addEventListener('click', clearEditForm);
+
+function clearAddForm(){
     addComicForm.reset();
+}
+
+function clearEditForm(){
+    editComicForm.reset();
 }

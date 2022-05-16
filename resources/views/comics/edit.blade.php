@@ -75,7 +75,7 @@
 
             <button type="submit" class="btn btn-primary">Add</button>
 
-            <div class="btn btn-secondary" id="btn-reset">Clear fields</div>
+            <div class="btn btn-secondary" id="btn-edit-reset">Clear fields</div>
 
             <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-link" id="btn-back">Back to comic</a>
 
