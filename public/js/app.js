@@ -19381,13 +19381,21 @@ module.exports = function(module) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // reset form button
 
 
-var btnReset = document.querySelector('#btn-reset');
+var btnAddReset = document.querySelector('#btn-add-reset');
+var btnEditReset = document.querySelector('#btn-edit-reset');
 var addComicForm = document.querySelector('#addComicForm');
-btnReset.addEventListener('click', clearForm);
-
-function clearForm() {
-  addComicForm.reset();
-}
+var editComicForm = document.querySelector('#editComicForm'); // if (btnAddReset) {
+//     btnAddReset.addEventListener('click', clearAddForm);
+//     function clearAddForm(){
+//         addComicForm.reset();
+//     }
+// }
+// if (btnEditReset) {
+//     btnEditReset.addEventListener('click', clearEditForm);
+//     function clearEditForm(){
+//         editComicForm.reset();
+//     }
+// }
 
 /***/ }),
 

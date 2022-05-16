@@ -7,14 +7,19 @@ const btnEditReset = document.querySelector('#btn-edit-reset');
 const addComicForm = document.querySelector('#addComicForm')
 const editComicForm = document.querySelector('#editComicForm')
 
+// if (btnAddReset) {
+//     btnAddReset.addEventListener('click', clearAddForm);
 
-btnAddReset.addEventListener('click', clearAddForm);
-btnEditReset.addEventListener('click', clearEditForm);
+//     function clearAddForm(){
+//         addComicForm.reset();
+//     }
+// }
 
-function clearAddForm(){
-    addComicForm.reset();
-}
+// if (btnEditReset) {
+//     btnEditReset.addEventListener('click', clearEditForm);
 
-function clearEditForm(){
-    editComicForm.reset();
-}
+//     function clearEditForm(){
+//         editComicForm.reset();
+//     }
+// }
+
