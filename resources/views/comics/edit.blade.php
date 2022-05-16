@@ -77,7 +77,7 @@
 
             <div class="btn btn-secondary" id="btn-edit-reset">Clear fields</div>
 
-            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-link" id="btn-back">Back to comic</a>
+            <a href="{{ url()->previous() }}" class="btn btn-link" id="btn-back">Back</a>
 
         </form>
     </main>
