@@ -19384,18 +19384,23 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // reset 
 var btnAddReset = document.querySelector('#btn-add-reset');
 var btnEditReset = document.querySelector('#btn-edit-reset');
 var addComicForm = document.querySelector('#addComicForm');
-var editComicForm = document.querySelector('#editComicForm'); // if (btnAddReset) {
-//     btnAddReset.addEventListener('click', clearAddForm);
-//     function clearAddForm(){
-//         addComicForm.reset();
-//     }
-// }
-// if (btnEditReset) {
-//     btnEditReset.addEventListener('click', clearEditForm);
-//     function clearEditForm(){
-//         editComicForm.reset();
-//     }
-// }
+var editComicForm = document.querySelector('#editComicForm');
+
+if (btnAddReset) {
+  var clearAddForm = function clearAddForm() {
+    addComicForm.reset();
+  };
+
+  btnAddReset.addEventListener('click', clearAddForm);
+}
+
+if (btnEditReset) {
+  var clearEditForm = function clearEditForm() {
+    editComicForm.reset();
+  };
+
+  btnEditReset.addEventListener('click', clearEditForm);
+}
 
 /***/ }),
 
