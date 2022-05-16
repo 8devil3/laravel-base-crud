@@ -21,6 +21,8 @@
 
 <body>
 
+    @include('_partials._header')
+
     @yield('mainContent')
 
 </body>

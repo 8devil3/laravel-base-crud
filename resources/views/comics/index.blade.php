@@ -5,22 +5,27 @@
 @section('mainContent')
     <main>
         <div class="container">
-            <div class="text-center"><a href="{{ route('home') }}">back to homepage</a></div>
-            <div class="text-center"><a href="{{ route('comics.create') }}">add new comic</a></div>
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 p-4">
+            <div>
                 @foreach ($comics as $comic)
                 <div class="col">
-                    <article class="card h-100">
-                        <a href="{{ route('comics.show', $comic['id']) }}">
-                            <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="{{ $comic['title'] }}">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <a href="{{ route('comics.show', $comic['id']) }}">{{ $comic['title'] }}</a>
-                            </h5>
-                            <p class="card-text">{{ $comic['description'] }}</p>
-                            <p class="card-text">$ {{ $comic['price'] }}</p>
+                    <article class="card mb-3 w-100">
+                        <div class="row g-0">
+                            <div class="col-md-2">
+                                <a href="{{ route('comics.show', $comic['id']) }}">
+                                    <img src="{{ $comic['thumb'] }}" class="img-fluid rounded-start" alt="{{ $comic['title'] }}">
+                                </a>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body h-100 d-flex flex-column">
+                                    <div>
+                                        <h5 class="card-title">
+                                            <a href="{{ route('comics.show', $comic['id']) }}">{{ $comic['title'] }}</a>
+                                        </h5>
+                                        <p class="card-text">{{ $comic['description'] }}</p>
+                                    </div>
+                                    <span class="mt-auto d-block"><strong>$ {{ $comic['price'] }}</strong></span>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>
