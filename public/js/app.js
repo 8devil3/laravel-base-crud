@@ -19400,7 +19400,16 @@ if (btnEditReset) {
   };
 
   btnEditReset.addEventListener('click', clearEditForm);
-}
+} //index page, delete button
+
+
+var btnDel = document.querySelectorAll('.btn-del');
+var indexForm = document.querySelector('#indexForm');
+btnDel.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    indexForm.action = this.dataset.baseurl + '/' + this.dataset.id;
+  });
+});
 
 /***/ }),
 

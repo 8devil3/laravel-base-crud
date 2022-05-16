@@ -22,3 +22,14 @@ if (btnEditReset) {
         editComicForm.reset();
     }
 }
+
+
+//index page, delete button
+const btnDel = document.querySelectorAll('.btn-del');
+const indexForm = document.querySelector('#indexForm');
+
+btnDel.forEach(btn => {
+   btn.addEventListener('click', function(){
+      indexForm.action = this.dataset.baseurl + '/' + this.dataset.id
+   });
+});
