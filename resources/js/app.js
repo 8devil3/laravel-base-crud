@@ -22,4 +22,3 @@ if (btnEditReset) {
         editComicForm.reset();
     }
 }
-

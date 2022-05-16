@@ -73,7 +73,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-success">Save</button>
 
             <div class="btn btn-secondary" id="btn-edit-reset">Clear fields</div>
 
